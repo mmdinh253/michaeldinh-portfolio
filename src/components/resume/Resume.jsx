@@ -1,10 +1,17 @@
 import React from 'react'
-import './Resume.css'
+import resume from '../../files/resume.pdf'
 
 const Resume = () => {
   return (
-    <div>
-      
+    <div className='resume'>
+        <iframe 
+            src={resume} 
+            title="Resume"
+            width='100%'
+            height='800px'
+            style={{border: 'none'}}
+            frameborder="0"
+        />
     </div>
   )
 }
