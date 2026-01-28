@@ -1,132 +1,128 @@
 .projects {
-    margin: 80px auto;
+    margin: 0 auto;
+    border-bottom: 1px solid #797979;
     padding: 0 80px;
     position: relative;
 }
-
-.next-btn, .back-btn {
+  
+/* ---------- arrows ---------- */
+.next-btn,
+.back-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 15px;
-    width: 8px;
+    padding: 12px;
+    width: 48px;
     border-radius: 50%;
     cursor: pointer;
-    background: #212EA0;
-    z-index: 20;
+    z-index: 10;
 }
-
+  
 .next-btn {
     right: -20px;
 }
-
+  
 .back-btn {
     left: -20px;
 }
-
-.next-btn:hover,
-.back-btn:hover {
-  background: #1a237e;
-}
-
+  
+/* ---------- slider ---------- */
 .slider {
     overflow: hidden;
     width: 100%;
 }
-
+  
 .slider ul {
     display: flex;
     transition: transform 0.5s ease-in-out;
     padding: 0;
     margin: 0;
 }
-
+  
 .slider ul li {
     list-style: none;
-    width: 100%;
+    flex: 0 0 100%;
     padding: 20px;
+    box-sizing: border-box;
 }
-
+  
+/* ---------- slide card ---------- */
 .slide {
     background: #fff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  
+    /* keep card centered */
     text-align: center;
 }
-
-.slide .box-info {
-    width: 65px;
-    border-radius: 50%;
-    margin-right: 10px;
-    border-radius: 4px solid #212EA0;
+  
+/* remove link styling */
+.slide a,
+.slider a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
-
-.project-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
+  
+/* ---------- header ---------- */
+.slide h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+  
+.slide span {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 20px;
+}
+  
+/* ---------- description list ---------- */
+.slide ul {
+    display: block;
+    text-align: left;        /* LEFT ALIGN CONTENT */
+    margin: 0;
+    padding-left: 20px;
+}
+  
+.slide ul li {
+    display: list-item;
+    list-style: disc;
+    line-height: 1.6;
     font-size: 15px;
 }
-
-.project-info h3 {
-    color: #212EA0;
-}
-
-/* --- media query --- */
-@media (max-width: 800px) {
+  
+/* ---------- responsive ---------- */
+@media (max-width: 1000px) {
     .projects {
         padding: 0 40px;
     }
-
-    .next-btn, .back-btn {
-        padding: 10px;
-        width: 35px;
-    }
-
-    .projects ul li {
-        padding: 10px;
-    }
-
-    .slide {
-        padding: 10px;
-    }
-
-    .slide .box-info {
-        width: 50px;
-        border: 3px solid #212EA0;
-    }
 }
-
+  
 @media (max-width: 768px) {
+    .projects {
+        padding: 0 20px;
+    }
+  
+    .slide {
+        padding: 25px;
+    }
+  
     .next-btn,
     .back-btn {
-      width: 28px;
-      height: 28px;
-    }
-  
-    .back-btn {
-      left: -10px;
-    }
-  
-    .next-btn {
-      right: -10px;
-    }
-  }
-  
-
-@media (max-width: 600px) {
-    .project-info {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 12px;
-    }
-
-    .project-info h3 {
-        font-size: 16px;
-    }
-
-    .slider p {
-        font-size: 12px;
+        width: 40px;
+        padding: 10px;
     }
 }
+  
+@media (max-width: 500px) {
+    .slide h3 {
+        font-size: 18px;
+    }
+  
+    .slide ul li {
+        font-size: 14px;
+    }
+}
+  

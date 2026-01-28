@@ -1,5 +1,6 @@
 .about {
-    margin: 100px auto;
+    margin: 0 auto;
+    border-bottom: 1px solid #797979;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,6 +52,8 @@
 
     .about-right {
         flex-basis: 100%;
+        text-align: center;
+        justify-content: center;
     }
 
 }

@@ -1,7 +1,11 @@
+:root {
+    --nav-height: 70px;
+}
+
 nav {
     width: 100%;
-    color: #000000;
-    padding: 4px 0;
+    /* padding: 4px 0; */
+    padding: 0 80px;
     position: fixed;
 
     /* Aligning title and nav links */
@@ -10,11 +14,18 @@ nav {
     display: flex; /* Align the content side-by-side */
     align-items: center;
     justify-content: space-between; /* Logo on the left and text on the right */
-    z-index: 10; /**/
+    /* z-index: 10;  */
+    z-index: 1000;
 }
 
 .logo {
-    width: 108px;
+    width: 50px;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 nav ul li {
@@ -24,9 +35,14 @@ nav ul li {
     font-size: 16px;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+
 .dark-nav {
     background: #ffff00;
-    transition: 0.5s;
+    transition: background 0.5s ease;
 }
 
 .menu-icon {
@@ -35,18 +51,23 @@ nav ul li {
 
 /* --- media query --- */
 @media (max-width: 1000px) {
-    .logo {
+    /* .logo {
         width: 140px;
-    }
+    } */
 
     nav ul li {
         margin: 10px 15px;
+    }
+
+    .dark-nav {
+        background: transparent;
     }
 }
 
 @media (max-width: 840px) {
     nav {
-        padding: 15px 0;
+        /* padding: 15px 0; */
+        padding: 0 30px;
     }
 
     nav ul {
@@ -67,7 +88,7 @@ nav ul li {
         margin: 25px 40px;
     }
 
-    .menu-icon {
+    .menu-icon { 
         display: block;
         width: 30px;
         cursor: pointer;

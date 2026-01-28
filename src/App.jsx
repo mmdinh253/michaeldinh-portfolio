@@ -24,13 +24,13 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a> */}
         <div className='container'>
-          <Title title='About'/>
+          <Title id='about' title='About'/>
           <About/>
-          <Title title='Projects'/>
+          <Title id='projects' title='Projects'/>
           <Projects/>
-          <Title title='Resume'/>
+          <Title id='resume' title='Resume'/>
           <Resume/>
-          <Title title='Contact'/>
+          <Title id='contact' title='Contact'/>
           <Contact/>
           <Footer/>
         </div>
