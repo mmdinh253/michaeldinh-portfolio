@@ -10,8 +10,9 @@ const About = () => {
         </div>
         <div className="about-right">
             <h3>Hello, I'm Michael Dinh</h3>
-            <h2>Aspiring Software Engineer</h2>
-            <p>I'm a computer science graduate from the University of Washington
+            <h2>Full Stack Developer</h2>
+            <p>
+                I'm a computer science graduate from the University of Washington
                 with hands-on experience in software engineering, full-stack development, 
                 and IT support. Proficient in Java, Python, and C/C++, 
                 and have built scalable frontend and backend systems, APIs, 
